@@ -1,117 +1,95 @@
-/*
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+  
+    // Toggle the mobile navigation menu
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  });
 
-(function($) {
-
-	var $window = $(window),
-		$body = $('body'),
-		$header = $('#header'),
-		$footer = $('#footer'),
-		$main = $('#main'),
-		settings = {
-
-			// Parallax background effect?
-				parallax: true,
-
-			// Parallax factor (lower = more intense, higher = less intense).
-				parallaxFactor: 20
-
-		};
-
-	// Breakpoints.
-		breakpoints({
-			xlarge:  [ '1281px',  '1800px' ],
-			large:   [ '981px',   '1280px' ],
-			medium:  [ '737px',   '980px'  ],
-			small:   [ '481px',   '736px'  ],
-			xsmall:  [ null,      '480px'  ],
-		});
-
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
-
-	// Touch?
-		if (browser.mobile) {
-
-			// Turn on touch mode.
-				$body.addClass('is-touch');
-
-			// Height fix (mostly for iOS).
-				window.setTimeout(function() {
-					$window.scrollTop($window.scrollTop() + 1);
-				}, 0);
-
-		}
-
-	// Footer.
-		breakpoints.on('<=medium', function() {
-			$footer.insertAfter($main);
-		});
-
-		breakpoints.on('>medium', function() {
-			$footer.appendTo($header);
-		});
-
-	// Header.
-
-		// Parallax background.
-
-			// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
-				if (browser.name == 'ie'
-				||	browser.mobile)
-					settings.parallax = false;
-
-			if (settings.parallax) {
-
-				breakpoints.on('<=medium', function() {
-
-					$window.off('scroll.strata_parallax');
-					$header.css('background-position', '');
-
-				});
-
-				breakpoints.on('>medium', function() {
-
-					$header.css('background-position', 'left 0px');
-
-					$window.on('scroll.strata_parallax', function() {
-						$header.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
-					});
-
-				});
-
-				$window.on('load', function() {
-					$window.triggerHandler('scroll');
-				});
-
-			}
-
-	// Main Sections: Two.
-
-		// Lightbox gallery.
-			$window.on('load', function() {
-
-				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
-					overlayColor: '#2c2c2c',
-					overlayOpacity: 0.85,
-					popupCloserText: '',
-					popupLoaderText: '',
-					selector: '.work-item a.image',
-					usePopupCaption: true,
-					usePopupDefaultStyling: false,
-					usePopupEasyClose: false,
-					usePopupNav: true,
-					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-				});
-
-			});
-
-})(jQuery);
+  document.addEventListener("DOMContentLoaded", () => {
+    // Hamburger Menu Toggle (if not already implemented)
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    if (hamburger) {
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    }
+  
+    // Modal functionality for cards
+    const modal = document.getElementById('detail-modal');
+    const closeModal = document.querySelector('.modal-close');
+    const detailButtons = document.querySelectorAll('.details-btn');
+    const modalDetails = document.getElementById('modal-details');
+  
+    // Example detailed content for each card
+    const experienceDetails = {
+      exp1: `
+        <h4>Infrrd - Detailed Experience</h4>
+        <p>
+          At Infrrd, I was part of the backend development team where I designed and implemented
+          scalable solutions. My responsibilities included API development, data processing, and
+          performance optimization.
+        </p>
+        <p>
+          Technologies used: Java, Spring Boot, MySQL, and AWS.
+        </p>
+      `,
+      exp2: `
+        <h4>Other Company - Detailed Experience</h4>
+        <p>
+          In my role at Other Company, I led projects focused on improving system reliability and
+          enhancing user experience through modern web technologies.
+        </p>
+        <p>
+          Technologies used: Node.js, Express, and MongoDB.
+        </p>
+      `
+    };
+  
+    const educationDetails = {
+      edu1: `
+        <h4>Rochester Institute of Technology</h4>
+        <p>
+          Pursuing an MS in Computer Science with a focus on software engineering and emerging technologies.
+        </p>
+      `,
+      edu2: `
+        <h4>University Name</h4>
+        <p>
+          Completed a BE in Information Science with extensive coursework in software development,
+          algorithms, and systems design.
+        </p>
+      `
+    };
+  
+    // Open modal when a "Read More" button is clicked
+    detailButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const target = btn.getAttribute('data-target');
+        // Determine if the target is an experience or education detail
+        if (experienceDetails[target]) {
+          modalDetails.innerHTML = experienceDetails[target];
+        } else if (educationDetails[target]) {
+          modalDetails.innerHTML = educationDetails[target];
+        } else {
+          modalDetails.innerHTML = `<p>More details coming soon...</p>`;
+        }
+        modal.style.display = 'flex';
+      });
+    });
+  
+    // Close modal when clicking the close icon or outside the modal content
+    closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+  
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  });
+  
