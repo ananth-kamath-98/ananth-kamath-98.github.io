@@ -12,75 +12,7 @@
     background: #1a1a1a;
     color: #eee;
   }
-  
-  /* Header & Navigation */
-  header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    padding: 20px 40px;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .logo {
-    font-size: 2em;
-    font-family: 'Cinzel', serif; /* A refined Tolkien-inspired font */
-    color: #d4af37;
-  }
-  .nav-links {
-    list-style: none;
-    display: flex;
-  }
-  .nav-links li {
-    margin: 0 15px;
-  }
-  .nav-links li a {
-    text-decoration: none;
-    color: #eee;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
-  }
-  .nav-links li a:hover {
-    color: #d4af37;
-  }
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-  }
-  .hamburger .bar {
-    height: 3px;
-    width: 25px;
-    background-color: #d4af37;
-    margin: 4px 0;
-    transition: 0.3s;
-  }
-  
-  /* Responsive Navigation for Mobile */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 80px;
-      right: 40px;
-      background: rgba(0, 0, 0, 0.9);
-      padding: 20px;
-      border-radius: 8px;
-    }
-    .nav-links.active {
-      display: flex;
-    }
-    .hamburger {
-      display: flex;
-    }
-  }
+
   
   /* Hero Section */
   #hero {
@@ -95,7 +27,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/hero-bg.jpg') center center / cover no-repeat;
+    background: url('../images/bg.jpg') center center / cover no-repeat;
     z-index: -1;
     filter: brightness(0.65);
     background-attachment: fixed;
@@ -151,129 +83,13 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* About Me Section */
-#about {
-    padding: 80px 20px;
-    background-color: rgba(44, 44, 44, 0.8);
-  }
-  #about .container {
-    max-width: 1000px;
-    margin: auto;
-    color: #eee;
-    text-align: center;
-  }
-  #about h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    font-family: 'Cinzel', serif;
-    color: #d4af37; /* Golden accent */
-  }
-  #about h3 {
-    font-size: 2em;
-    margin: 40px 0 20px;
-    font-family: 'Cinzel', serif;
-    color: #d4af37;
-  }
-  #about p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    line-height: 1.6;
-  }
-  
   /* Bio Section */
   .bio p {
     max-width: 800px;
     margin: auto;
   }
   
-  /* Timeline Common Styles */
-  .timeline {
-    position: relative;
-    padding: 20px 0;
-  }
   
-  /* Vertical Line for Timeline */
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    width: 2px;
-    background: #d4af37;
-    top: 0;
-    bottom: 0;
-    transform: translateX(-50%);
-  }
-  
-  /* Timeline Items */
-  .timeline-item {
-    position: relative;
-    width: 50%;
-    padding: 20px 40px;
-    box-sizing: border-box;
-    opacity: 0; /* For scroll-triggered animation */
-  }
-  .timeline-item:nth-child(odd) {
-    left: 0;
-    text-align: right;
-  }
-  .timeline-item:nth-child(even) {
-    left: 50%;
-    text-align: left;
-  }
-  .timeline-icon {
-    width: 40px;
-    height: 40px;
-    background: #d4af37;
-    color: #1a1a1a;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2em;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-  .timeline-content {
-    background: #333;
-    padding: 20px;
-    border-radius: 8px;
-    position: relative;
-  }
-  .timeline-content h4 {
-    font-size: 1.5em;
-    margin-bottom: 5px;
-    font-family: 'Cinzel', serif;
-  }
-  .timeline-content span {
-    font-size: 0.9em;
-    color: #aaa;
-    margin-bottom: 10px;
-    display: block;
-  }
-  .timeline-content p {
-    font-size: 1em;
-    line-height: 1.6;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .timeline-item {
-      width: 100%;
-      padding: 10px 20px;
-      text-align: left;
-      left: 0 !important;
-    }
-    .timeline::before {
-      left: 20px;
-    }
-    .timeline-icon {
-      left: 20px;
-      transform: none;
-    }
-  }
   
 /* About Me Section General Styles */
 #about {
@@ -696,7 +512,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../images/bg.jpg') center center/cover no-repeat;
+    /* background: url('../images/bg.jpg') center center/cover no-repeat; */
     filter: blur(8px);
     -webkit-filter: blur(2px);
     z-index: -2; /* ensure it sits behind the content */
@@ -719,45 +535,165 @@ body::before {
     
     z-index: -1; /* sits above the blurred image but behind the content */
   }
-  
-  /* Fixed Circular Profile Image - Responsive */
-.fixed-profile {
-    position: fixed;
-    top: 50%;
-    left: 1rem; /* Use relative spacing */
-    transform: translateY(-50%);
-    /* The clamp() function makes the size fluid between a minimum, preferred, and maximum value */
-    width: clamp(100px, 15vw, 150px);
-    height: clamp(100px, 15vw, 150px);
-    border-radius: 50%;
-    overflow: hidden;
-    z-index: 2000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+/* Overall Two-Column Layout Using CSS Grid */
+.main-container {
+    display: grid;
+  /* The left side is ~25% of the screen, the right side is the remaining 75% */
+  grid-template-columns: 25vw 1fr;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
   }
   
-  .fixed-profile img {
+  /* Left Side: Reserved exclusively for the Profile Card */
+  .left-side {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    /* Remove any padding so the card can nearly fill the space */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Centers the card both horizontally and vertically */
+    background: transparent;
+  }
+  
+  /* Profile Card: Initial (Circular) State */
+  .profile-card {
+    width: 280px;       /* Nearly fills the 300px column (only 10px space on each side) */
+    height: 280px;
+    border-radius: 50%; /* Circular shape */
+    overflow: hidden;
+    background-color: #333; /* Fallback background */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: 
+      width 0.5s ease,
+      height 0.5s ease,
+      border-radius 0.5s ease,
+      top 0.5s ease,
+      transform 0.5s ease;
+  }
+  
+  /* Ensuring the image fills the card */
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: border-radius 0.5s ease;
+  }
+  
+  .profile-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: all 0.3s ease;
   }
   
-  /* Scrollable Content Area Adjusted Based on the Profile Image Size */
-  .content {
-    /* The left margin is calculated as the width of the profile image plus additional spacing */
-    margin-left: calc(clamp(100px, 15vw, 150px) + 1rem);
+  /* Initially Hidden Profile Info */
+  .profile-info {
+    display: none;
     padding: 1rem;
+    color: #eee;
+    text-align: center;
   }
   
-  /* Media Query for Smaller Screens */
-  @media (max-width: 600px) {
-    .fixed-profile {
-      left: 0.5rem;
-      width: clamp(80px, 20vw, 120px);
-      height: clamp(80px, 20vw, 120px);
+  /* Expanded State: Transition to a Rectangular Card */
+  .profile-card.expanded {
+    width: 300px;         /* Fills the left column completely */
+    height: 450px;        /* Increased height for image + info */
+    border-radius: 10px;  /* Rounded rectangle */
+  }
+  
+  .profile-card.expanded .profile-image {
+    height: 50%;  /* Image occupies the top half */
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .profile-card.expanded .profile-info {
+    display: block;  /* Reveal text info */
+    height: 50%;     /* Text occupies the bottom half */
+  }
+  
+  
+  /* Basic styling for content sections */
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Example Hero Section Styles */
+  #hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .hero-content {
+    text-align: center;
+  }
+  
+  /* Responsive adjustments if needed */
+  @media (max-width: 768px) {
+    .main-container {
+      grid-template-columns: 200px 1fr;
     }
-    .content {
-      margin-left: calc(clamp(80px, 20vw, 120px) + 0.5rem);
+    .profile-card.expanded {
+      width: 200px;
+      height: 300px;
     }
   }
+  
+
+  /* Style each section in the right-side as a distinct card */
+.right-side section {
+    margin: 2rem auto;            /* Space between cards */
+    max-width: 80%;             /* Limit the card width for readability */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px;          /* Rounded corners */
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Optional: Adjust headings inside cards */
+  .right-side section h2,
+  .right-side section h3 {
+    margin-bottom: 1rem;
+    font-family: 'Cinzel', serif;
+    color: #d4af37; /* Golden accent, matching previous theme */
+  }
+  
+  /* Example: Hero card should have a distinct style if needed */
+  #hero {
+    /* Optionally remove full-viewport height if the card layout is preferred */
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Adjust container padding in the right-side if necessary */
+  .right-side {
+    /* padding: 1rem; */
+    background: transparent; /* Keep transparency so the body’s background is visible */
+  }
+
+
+  .parallax-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Increase height to provide extra image area during translate */
+    height: 150vh;  
+    background: url('../images/bg.jpg') center center/cover no-repeat fixed;
+    z-index: -2;
+  }
+  
+  
   

@@ -92,4 +92,37 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const heroSection = document.getElementById('hero');
+    const profileCard = document.getElementById('profile-card');
+  
+    const options = {
+      root: null,        // viewport
+      threshold: 0.5    // when 10% of hero is visible
+    };
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          profileCard.classList.add('expanded');
+        } else {
+          profileCard.classList.remove('expanded');
+        }
+      });
+    }, options);
+  
+    observer.observe(heroSection);
+  });
+  
+  document.addEventListener("scroll", function () {
+    const scrolled = window.pageYOffset;
+    const parallax = document.querySelector('.parallax-bg');
+  
+    // Adjust the parallax scrolling speed factor (e.g., 0.5 means slower movement)
+    const speedFactor = 0.1;
+  
+    // Update background position using translateY
+    parallax.style.transform = 'translateY(-' + scrolled * speedFactor + 'px)';
+  });
   

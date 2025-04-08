@@ -3,234 +3,218 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YourName | Software Engineer Portfolio</title>
+  <title>Ananth Kamath</title>
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
-  <!-- Professional, subtle Tolkien-inspired header font -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-  <!-- Clean, modern font for body text -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/fonts/fontawesome/css/all.min.css" />
 </head>
 <body>
   <div class = "main-container">
 
-    <!-- Fixed left sidebar -->
-    <div class="fixed-profile">
-        <img src="assets/images/avatar.jpg" alt="Ananth Kamath" />
-    </div>
-
-    <div class = "content">
-        <!-- Header & Navigation
-<header id="header">
-    <nav class="navbar">
-      <div class="logo">YourName</div>
-      <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+    <div class="left-side">
+        <div class="profile-card" id="profile-card">
+          <div class="profile-image">
+            <img src="assets/images/avatar.jpg" alt="Ananth Kamath" />
+          </div>
+          <div class="profile-info">
+            <h3>Ananth Kamath</h3>
+            <p>Software Engineer | MSCS @ RIT</p>
+            <!-- <p>"Problems that remain persistently insoluble should always be suspected as questions asked in the wrong way." - Alan Watts</p> -->
+          </div>
+        </div>
       </div>
-    </nav>
-  </header> -->
+    
+    <div class="right-side">
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+            <h1>Hi, I'm Ananth Kamath</h1>
+            <p>Software Engineer | Crafting Code with Precision & Passion</p>
+            <a href="#about" class="btn">View My Work</a>
+            </div>
+      </section>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <h1>Welcome, I'm YourName</h1>
-      <p>Software Engineer | Crafting Code with Precision & Passion</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
-  </section>
-
-<!-- About Me Section -->
-<section id="about">
-    <div class="container">
-      <h2>About Me</h2>
+      <section id="about">
+        <div class="container">
+          <h2>About Me</h2>
+          
+          <!-- Bio Section -->
+          <div class="bio">
+            <p>
+                I am your friendly coding sorcerer specializing in crafting potent backend systems with the wizardry of Java. Picture me as the Gandalf of Software Development, conjuring intricate solutions and mastering the mystical arts of System Design. Join me on this enchanting coding quest where every line of code is a magical incantation, and every project is a spellbinding testament to my prowess in the wizarding world of programming!
+            </p>
+          </div>
+          
+          <!-- Professional Experience Section -->
+          <div class="experience">
+            <h3>Professional Experience</h3>
+            <div class="cards">
+              <!-- Card for Experience 1 -->
+              <div class="card" data-experience="exp1">
+                <div class="card-header">
+                  <i class="fas fa-briefcase"></i>
+                  <h4>Infrrd</h4>
+                </div>
+                <div class="card-body">
+                  <span>Software Engineer, 2020 - 2023</span>
+                  <p>
+                    Developed robust backend systems and contributed to intelligent document processing.
+                  </p>
+                  <button class="details-btn" data-target="exp1">Read More</button>
+                </div>
+              </div>
+              <!-- Card for Experience 2 -->
+              <div class="card" data-experience="exp2">
+                <div class="card-header">
+                  <i class="fas fa-briefcase"></i>
+                  <h4>Other Company</h4>
+                </div>
+                <div class="card-body">
+                  <span>Role, Year - Year</span>
+                  <p>
+                    Brief summary of responsibilities and projects.
+                  </p>
+                  <button class="details-btn" data-target="exp2">Read More</button>
+                </div>
+              </div>
+              <!-- Add more experience cards as needed -->
+            </div>
+          </div>
+          
+          <!-- Education Section -->
+          <div class="education">
+            <h3>Education</h3>
+            <div class="cards">
+              <!-- Card for Education 1 -->
+              <div class="card" data-education="edu1">
+                <div class="card-header">
+                  <i class="fas fa-graduation-cap"></i>
+                  <h4>Rochester Institute of Technology</h4>
+                </div>
+                <div class="card-body">
+                  <span>MS in Computer Science, 2023 - Present</span>
+                  <p>
+                    Pursuing advanced studies in software engineering and emerging technologies.
+                  </p>
+                  <button class="details-btn" data-target="edu1">Read More</button>
+                </div>
+              </div>
+              <!-- Card for Education 2 -->
+              <div class="card" data-education="edu2">
+                <div class="card-header">
+                  <i class="fas fa-graduation-cap"></i>
+                  <h4>University Name</h4>
+                </div>
+                <div class="card-body">
+                  <span>BE in Information Science, 2016 - 2020</span>
+                  <p>
+                    Completed a comprehensive program in information science and engineering.
+                  </p>
+                  <button class="details-btn" data-target="edu2">Read More</button>
+                </div>
+              </div>
+              <!-- Add more education cards as needed -->
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    <!-- Blogs Section -->
+    <section id="blogs">
+        <div class="container">
+          <h2>Latest Blogs</h2>
+          <div class="blog-cards">
+            <!-- Blog Card 1 -->
+            <div class="blog-card">
+              <img src="assets/images/blog1.jpg" alt="Blog Post 1" />
+              <div class="blog-content">
+                <h3>Blog Post Title 1</h3>
+                <p>A brief summary or excerpt from the blog post to entice the reader...</p>
+                <a href="https://yourblogsite.com/post1" class="btn">Read More</a>
+              </div>
+            </div>
+            <!-- Blog Card 2 -->
+            <div class="blog-card">
+              <img src="assets/images/blog2.jpg" alt="Blog Post 2" />
+              <div class="blog-content">
+                <h3>Blog Post Title 2</h3>
+                <p>A brief summary or excerpt from the blog post to entice the reader...</p>
+                <a href="https://yourblogsite.com/post2" class="btn">Read More</a>
+              </div>
+            </div>
+            <!-- Additional blog cards as needed -->
+          </div>
+          <a href="https://yourblogsite.com" class="btn view-all">View All Blogs</a>
+        </div>
+      </section>
       
-      <!-- Bio Section -->
-      <div class="bio">
-        <p>
-          I am a passionate Software Engineer with a focus on clean code and innovative solutions.
-          My journey has been defined by continuous learning, tackling challenging projects,
-          and a commitment to excellence in every line of code.
-        </p>
-      </div>
+      <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="project-cards">
+            <!-- Project Card 1 -->
+            <div class="project-card" data-project="project1">
+              <img src="assets/images/projects/project1.jpg" alt="Project 1" />
+              <div class="project-info">
+                <h3>Project Title 1</h3>
+                <p>Short description of project 1 highlighting key features and technologies used.</p>
+                <a href="https://github.com/yourusername/project1" class="btn">View Details</a>
+              </div>
+            </div>
+            <!-- Project Card 2 -->
+            <div class="project-card" data-project="project2">
+              <img src="assets/images/projects/project2.jpg" alt="Project 2" />
+              <div class="project-info">
+                <h3>Project Title 2</h3>
+                <p>Short description of project 2 highlighting key features and technologies used.</p>
+                <a href="https://github.com/yourusername/project2" class="btn">View Details</a>
+              </div>
+            </div>
+            <!-- Additional project cards can be added similarly -->
+          </div>
+        </div>
+      </section>
       
-      <!-- Professional Experience Section -->
-      <div class="experience">
-        <h3>Professional Experience</h3>
-        <div class="cards">
-          <!-- Card for Experience 1 -->
-          <div class="card" data-experience="exp1">
-            <div class="card-header">
-              <i class="fas fa-briefcase"></i>
-              <h4>Infrrd</h4>
-            </div>
-            <div class="card-body">
-              <span>Software Engineer, 2020 - 2023</span>
-              <p>
-                Developed robust backend systems and contributed to intelligent document processing.
-              </p>
-              <button class="details-btn" data-target="exp1">Read More</button>
-            </div>
+      <!-- Contact Me Section -->
+    <section id="contact">
+        <div class="container">
+          <h2>Contact Me</h2>
+          <p>Have an idea, project, or question? I'd love to hear from you. Reach out and let's start a conversation!</p>
+          <form action="mailto:your.email@example.com" method="POST" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+            <!-- Add additional social icons as desired -->
           </div>
-          <!-- Card for Experience 2 -->
-          <div class="card" data-experience="exp2">
-            <div class="card-header">
-              <i class="fas fa-briefcase"></i>
-              <h4>Other Company</h4>
-            </div>
-            <div class="card-body">
-              <span>Role, Year - Year</span>
-              <p>
-                Brief summary of responsibilities and projects.
-              </p>
-              <button class="details-btn" data-target="exp2">Read More</button>
-            </div>
-          </div>
-          <!-- Add more experience cards as needed -->
         </div>
-      </div>
+      </section>
       
-      <!-- Education Section -->
-      <div class="education">
-        <h3>Education</h3>
-        <div class="cards">
-          <!-- Card for Education 1 -->
-          <div class="card" data-education="edu1">
-            <div class="card-header">
-              <i class="fas fa-graduation-cap"></i>
-              <h4>Rochester Institute of Technology</h4>
-            </div>
-            <div class="card-body">
-              <span>MS in Computer Science, 2023 - Present</span>
-              <p>
-                Pursuing advanced studies in software engineering and emerging technologies.
-              </p>
-              <button class="details-btn" data-target="edu1">Read More</button>
+      
+      <!-- Modal Structure (Reused for both Experience & Education) -->
+      <div class="modal" id="detail-modal">
+        <div class="modal-content">
+          <span class="modal-close">&times;</span>
+          <div class="modal-body">
+            <!-- Detailed content will be loaded dynamically based on the card clicked -->
+            <div id="modal-details">
+              <!-- Default content can go here or be empty -->
             </div>
           </div>
-          <!-- Card for Education 2 -->
-          <div class="card" data-education="edu2">
-            <div class="card-header">
-              <i class="fas fa-graduation-cap"></i>
-              <h4>University Name</h4>
-            </div>
-            <div class="card-body">
-              <span>BE in Information Science, 2016 - 2020</span>
-              <p>
-                Completed a comprehensive program in information science and engineering.
-              </p>
-              <button class="details-btn" data-target="edu2">Read More</button>
-            </div>
-          </div>
-          <!-- Add more education cards as needed -->
         </div>
       </div>
-    </div>
-  </section>
-
-<!-- Blogs Section -->
-<section id="blogs">
-    <div class="container">
-      <h2>Latest Blogs</h2>
-      <div class="blog-cards">
-        <!-- Blog Card 1 -->
-        <div class="blog-card">
-          <img src="assets/images/blog1.jpg" alt="Blog Post 1" />
-          <div class="blog-content">
-            <h3>Blog Post Title 1</h3>
-            <p>A brief summary or excerpt from the blog post to entice the reader...</p>
-            <a href="https://yourblogsite.com/post1" class="btn">Read More</a>
-          </div>
         </div>
-        <!-- Blog Card 2 -->
-        <div class="blog-card">
-          <img src="assets/images/blog2.jpg" alt="Blog Post 2" />
-          <div class="blog-content">
-            <h3>Blog Post Title 2</h3>
-            <p>A brief summary or excerpt from the blog post to entice the reader...</p>
-            <a href="https://yourblogsite.com/post2" class="btn">Read More</a>
-          </div>
-        </div>
-        <!-- Additional blog cards as needed -->
-      </div>
-      <a href="https://yourblogsite.com" class="btn view-all">View All Blogs</a>
     </div>
-  </section>
-  
-  <!-- Projects Section -->
-<section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-cards">
-        <!-- Project Card 1 -->
-        <div class="project-card" data-project="project1">
-          <img src="assets/images/projects/project1.jpg" alt="Project 1" />
-          <div class="project-info">
-            <h3>Project Title 1</h3>
-            <p>Short description of project 1 highlighting key features and technologies used.</p>
-            <a href="https://github.com/yourusername/project1" class="btn">View Details</a>
-          </div>
-        </div>
-        <!-- Project Card 2 -->
-        <div class="project-card" data-project="project2">
-          <img src="assets/images/projects/project2.jpg" alt="Project 2" />
-          <div class="project-info">
-            <h3>Project Title 2</h3>
-            <p>Short description of project 2 highlighting key features and technologies used.</p>
-            <a href="https://github.com/yourusername/project2" class="btn">View Details</a>
-          </div>
-        </div>
-        <!-- Additional project cards can be added similarly -->
-      </div>
-    </div>
-  </section>
-  
-  <!-- Contact Me Section -->
-<section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Have an idea, project, or question? I'd love to hear from you. Reach out and let's start a conversation!</p>
-      <form action="mailto:your.email@example.com" method="POST" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-      <div class="social-links">
-        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-        <!-- Add additional social icons as desired -->
-      </div>
-    </div>
-  </section>
-  
-  
-  <!-- Modal Structure (Reused for both Experience & Education) -->
-  <div class="modal" id="detail-modal">
-    <div class="modal-content">
-      <span class="modal-close">&times;</span>
-      <div class="modal-body">
-        <!-- Detailed content will be loaded dynamically based on the card clicked -->
-        <div id="modal-details">
-          <!-- Default content can go here or be empty -->
-        </div>
-      </div>
-    </div>
-  </div>
-    </div>
-
-  </div>
 
   <script src="assets/js/main.js"></script>
+  <div class="parallax-bg"></div>
 </body>
 </html>
