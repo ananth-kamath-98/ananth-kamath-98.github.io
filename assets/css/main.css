@@ -97,7 +97,7 @@
     background-color: rgba(44, 44, 44, 0.8);
   }
   #about .container {
-    max-width: 1000px;
+    max-width: 90%;
     margin: auto;
     color: #eee;
     text-align: center;
@@ -122,7 +122,7 @@
   
   /* Bio Section */
   .bio p {
-    max-width: 800px;
+    max-width: 100%;
     margin: auto;
   }
   
@@ -179,35 +179,82 @@
   }
   
   /* Modal Styles */
-  .modal {
-    display: none;
+  /* Dark overlay behind the modal */
+.modal {
+    display: none; /* or "flex" when active */
     position: fixed;
     z-index: 2000;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
     align-items: center;
     justify-content: center;
+    overflow: auto; /* If content overflows */
   }
+  
+  /* The modal content box */
   .modal-content {
-    background-color: #333;
-    padding: 20px;
+    background-color: #2c2c2c; /* Dark background matching site theme */
+    color: #eee;              /* Light text for contrast */
+    max-width: 75%;         /* Adjust as needed */
+    width: 90%;               /* Responsive for smaller screens */
+    margin: auto;
     border-radius: 8px;
-    width: 90%;
-    max-width: 600px;
+    padding: 2rem;
     position: relative;
-    color: #eee;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Open Sans', sans-serif; /* or your chosen body font */
   }
+  
+  /* Example heading styles inside modal */
+  .modal-content h2, .modal-content h3 {
+    font-family: 'Cinzel', serif; /* or your chosen accent font */
+    color: #d4af37;               /* Gold accent color */
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Paragraphs, bullet points, etc. */
+  .modal-content p,
+  .modal-content li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Buttons or links within the modal (e.g., 'Read More', 'Close', etc.) */
+  .modal-content a.btn,
+  .modal-content button {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid #d4af37;
+    background: transparent;
+    color: #d4af37;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+    cursor: pointer;
+  }
+  .modal-content a.btn:hover,
+  .modal-content button:hover {
+    background: #d4af37;
+    color: #2c2c2c;
+  }
+  
+  /* Close (X) icon in the top-right corner */
   .modal-close {
     position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 2em;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
     color: #d4af37;
+    transition: color 0.3s;
   }
+  .modal-close:hover {
+    color: #fff;
+  }
+  
 
   
 
@@ -618,7 +665,7 @@ body::before {
   
   /* Basic styling for content sections */
   .container {
-    max-width: 1000px;
+    max-width: 90%;
     margin: auto;
     text-align: center;
     color: #333;
@@ -652,7 +699,7 @@ body::before {
   /* Style each section in the right-side as a distinct card */
 .right-side section {
     margin: 2rem auto;            /* Space between cards */
-    max-width: 80%;             /* Limit the card width for readability */
+    max-width: 95%;             /* Limit the card width for readability */
     background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
     border-radius: 10px;          /* Rounded corners */
     padding: 2rem;
@@ -667,7 +714,6 @@ body::before {
     color: #d4af37; /* Golden accent, matching previous theme */
   }
   
-  /* Example: Hero card should have a distinct style if needed */
   #hero {
     /* Optionally remove full-viewport height if the card layout is preferred */
     min-height: 60vh;
@@ -678,8 +724,7 @@ body::before {
   
   /* Adjust container padding in the right-side if necessary */
   .right-side {
-    /* padding: 1rem; */
-    background: transparent; /* Keep transparency so the body’s background is visible */
+    background: transparent;
   }
 
 

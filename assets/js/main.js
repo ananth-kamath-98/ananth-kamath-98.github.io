@@ -27,15 +27,50 @@ document.addEventListener("DOMContentLoaded", () => {
     // Example detailed content for each card
     const experienceDetails = {
       exp1: `
-        <h4>Infrrd - Detailed Experience</h4>
+        <h2>Software Engineer – Backend Java Developer at Infrrd</h2>
         <p>
-          At Infrrd, I was part of the backend development team where I designed and implemented
-          scalable solutions. My responsibilities included API development, data processing, and
-          performance optimization.
+          <strong>Role and Impact:</strong><br>
+          At Infrrd, I worked as a Backend Java Developer, contributing to a product that transformed how documents are
+          processed and managed. Collaborating with a dynamic team, I took on challenges that ranged from building efficient
+          processing pipelines to enhancing secure user logins.
         </p>
-        <p>
-          Technologies used: Java, Spring Boot, MySQL, and AWS.
-        </p>
+        <h3>Key Contributions:</h3>
+        <ul>
+          <li>
+            <strong>Streamlined Document Processing:</strong> I helped design a feature that intelligently scans diverse storage
+            systems to identify documents that need processing. Using advanced algorithms and priority queues, we balanced
+            workloads and cut down processing latency by about 20%.
+          </li>
+          <li>
+            <strong>Enhanced User Authentication:</strong> I played a vital role in implementing a Single Sign-On (SSO) solution
+            using Spring Security SAML and OAuth. This made a huge difference by reducing the login process for over 500 users
+            from 5 steps to just 2 — making the platform both more secure and user-friendly.
+          </li>
+          <li>
+            <strong>Innovative Document Classification:</strong> I introduced a heuristic-based system for classifying similar
+            documents, achieving near-perfect accuracy without heavily relying on machine learning. This approach ensured fast
+            and efficient processing while maintaining high precision.
+          </li>
+        </ul>
+        <h3>System and Quality Improvements:</h3>
+        <ul>
+          <li>
+            Developed a message-queue based load balancer, contributing to a modular, event-driven architecture designed to
+            support fluctuating workloads.
+          </li>
+          <li>
+            Integrated real-time monitoring into our machine learning pipelines, enabling swift anomaly detection and
+            automatic failure tracking for millions of document fields.
+          </li>
+          <li>
+            Optimized MongoDB collections by refining indexing and aggregation pipelines, ensuring smooth handling of large
+            documents (300+ pages).
+          </li>
+          <li>
+            Embraced Test-Driven Development (TDD) practices to build a robust JUnit test suite, reaching 92% code coverage
+            and ensuring high-quality, maintainable code.
+          </li>
+        </ul>
       `,
       exp2: `
         <h4>Other Company - Detailed Experience</h4>
