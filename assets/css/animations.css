@@ -1,0 +1,39 @@
+/* Keyframe animations for timeline items */
+@keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Apply animations when timeline items become visible */
+  .timeline-item.visible:nth-child(odd) {
+    animation: slideInLeft 0.8s forwards;
+  }
+  
+  .timeline-item.visible:nth-child(even) {
+    animation: slideInRight 0.8s forwards;
+  }
+  
+  /* For mobile: make all items slide in from the left */
+  @media (max-width: 768px) {
+    .timeline-item.visible {
+      animation: slideInLeft 0.8s forwards;
+    }
+  }
+  

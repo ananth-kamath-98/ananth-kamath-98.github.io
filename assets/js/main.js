@@ -1,117 +1,81 @@
-/*
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+document.addEventListener("DOMContentLoaded", () => {
+  // Get modal elements
+  const modal = document.getElementById('detail-modal');
+  const closeModal = document.querySelector('.modal-close');
+  const modalDetails = document.getElementById('modal-details');
+  
+  // Function to load content from file
+  function loadContent(expId) {
+    fetch(`../assets/content/${expId}.html`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok.');
+        }
+        return response.text();
+      })
+      .then(html => {
+        modalDetails.innerHTML = html;
+        modal.style.display = 'flex';
+      })
+      .catch(error => {
+        console.error('Error loading content:', error);
+        modalDetails.innerHTML = "<p>Error loading content.</p>";
+        modal.style.display = 'flex';
+      });
+  }
+  
+  // Add event listeners to the "Read More" buttons:
+  const detailButtons = document.querySelectorAll('.details-btn');
+  detailButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const targetId = btn.getAttribute('data-target'); // e.g., "exp1" or "exp2"
+      loadContent(targetId);
+    });
+  });
+  
+  // Close modal when clicking the close icon or outside the modal content
+  closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+  
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+});
 
-(function($) {
 
-	var $window = $(window),
-		$body = $('body'),
-		$header = $('#header'),
-		$footer = $('#footer'),
-		$main = $('#main'),
-		settings = {
-
-			// Parallax background effect?
-				parallax: true,
-
-			// Parallax factor (lower = more intense, higher = less intense).
-				parallaxFactor: 20
-
-		};
-
-	// Breakpoints.
-		breakpoints({
-			xlarge:  [ '1281px',  '1800px' ],
-			large:   [ '981px',   '1280px' ],
-			medium:  [ '737px',   '980px'  ],
-			small:   [ '481px',   '736px'  ],
-			xsmall:  [ null,      '480px'  ],
-		});
-
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
-
-	// Touch?
-		if (browser.mobile) {
-
-			// Turn on touch mode.
-				$body.addClass('is-touch');
-
-			// Height fix (mostly for iOS).
-				window.setTimeout(function() {
-					$window.scrollTop($window.scrollTop() + 1);
-				}, 0);
-
-		}
-
-	// Footer.
-		breakpoints.on('<=medium', function() {
-			$footer.insertAfter($main);
-		});
-
-		breakpoints.on('>medium', function() {
-			$footer.appendTo($header);
-		});
-
-	// Header.
-
-		// Parallax background.
-
-			// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
-				if (browser.name == 'ie'
-				||	browser.mobile)
-					settings.parallax = false;
-
-			if (settings.parallax) {
-
-				breakpoints.on('<=medium', function() {
-
-					$window.off('scroll.strata_parallax');
-					$header.css('background-position', '');
-
-				});
-
-				breakpoints.on('>medium', function() {
-
-					$header.css('background-position', 'left 0px');
-
-					$window.on('scroll.strata_parallax', function() {
-						$header.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
-					});
-
-				});
-
-				$window.on('load', function() {
-					$window.triggerHandler('scroll');
-				});
-
-			}
-
-	// Main Sections: Two.
-
-		// Lightbox gallery.
-			$window.on('load', function() {
-
-				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
-					overlayColor: '#2c2c2c',
-					overlayOpacity: 0.85,
-					popupCloserText: '',
-					popupLoaderText: '',
-					selector: '.work-item a.image',
-					usePopupCaption: true,
-					usePopupDefaultStyling: false,
-					usePopupEasyClose: false,
-					usePopupNav: true,
-					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-				});
-
-			});
-
-})(jQuery);
+  document.addEventListener("DOMContentLoaded", () => {
+    const heroSection = document.getElementById('hero');
+    const profileCard = document.getElementById('profile-card');
+  
+    const options = {
+      root: null,        // viewport
+      threshold: 0.5    // when 10% of hero is visible
+    };
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          profileCard.classList.add('expanded');
+        } else {
+          profileCard.classList.remove('expanded');
+        }
+      });
+    }, options);
+  
+    observer.observe(heroSection);
+  });
+  
+  document.addEventListener("scroll", function () {
+    const scrolled = window.pageYOffset;
+    const parallax = document.querySelector('.parallax-bg');
+  
+    // Adjust the parallax scrolling speed factor (e.g., 0.5 means slower movement)
+    const speedFactor = 0.05;
+  
+    // Update background position using translateY
+    parallax.style.transform = 'translateY(-' + scrolled * speedFactor + 'px)';
+  });
+  
