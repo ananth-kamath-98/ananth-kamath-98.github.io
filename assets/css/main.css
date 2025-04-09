@@ -741,4 +741,71 @@ body::before {
   }
   
   
+  /* Skills Section Container */
+#skills {
+    padding: 80px 20px;
+    background-color: rgba(44, 44, 44, 0.8);
+  }
+  #skills .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Section Title */
+  #skills h2 {
+    font-size: 2.5em;
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Skills Group */
+  .skills-group {
+    margin-bottom: 2rem;
+  }
+  .skills-group h3 {
+    font-size: 1.8em;
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    margin-bottom: 1rem;
+  }
+  
+  /* Grid Layout for Skill Items */
+  .skills-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  /* Individual Skill Card */
+  .skill-item {
+    background: rgba(255, 255, 255, 0.95);  /* Light background for contrast with dark theme */
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Skill Icon */
+  .skill-item i {
+    font-size: 2em;
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Skill Label */
+  .skill-item span {
+    font-size: 1em;
+    color: #333;
+  }
   
