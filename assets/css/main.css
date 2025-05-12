@@ -47,7 +47,7 @@
     font-size: 3em;
     margin: 0;
     font-family: 'Cinzel', serif;
-    color: #d4af37;
+    color: #FF8F00;
     opacity: 0;
     animation: fadeIn 2s forwards;
   }
@@ -62,8 +62,8 @@
   .hero-content .btn {
     display: inline-block;
     padding: 10px 20px;
-    border: 2px solid #d4af37;
-    color: #d4af37;
+    border: 2px solid #FF8F00;
+    color: #FF8F00;
     text-decoration: none;
     font-size: 1.1em;
     border-radius: 4px;
@@ -73,7 +73,7 @@
     animation-delay: 1s;
   }
   .hero-content .btn:hover {
-    background: #d4af37;
+    background: #FF8F00;
     color: #1a1a1a;
   }
   
@@ -106,13 +106,13 @@
     font-size: 2.5em;
     margin-bottom: 20px;
     font-family: 'Cinzel', serif;
-    color: #d4af37;
+    color: #FF8F00;
   }
   #about h3 {
     font-size: 2em;
     margin: 40px 0 20px;
     font-family: 'Cinzel', serif;
-    color: #d4af37;
+    color: #FF8F00;
   }
   #about p {
     font-size: 1.2em;
@@ -152,7 +152,7 @@
   }
   .card-header h4 {
     font-family: 'Cinzel', serif;
-    color: #d4af37;
+    color: #FF8F00;
   }
   .card-body span {
     font-size: 0.9em;
@@ -166,15 +166,15 @@
   .details-btn {
     margin-top: 10px;
     padding: 8px 16px;
-    border: 1px solid #d4af37;
+    border: 1px solid #FF8F00;
     background: transparent;
-    color: #d4af37;
+    color: #FF8F00;
     border-radius: 4px;
     cursor: pointer;
     transition: background 0.3s;
   }
   .details-btn:hover {
-    background: #d4af37;
+    background: #FF8F00;
     color: #1a1a1a;
   }
   
@@ -211,7 +211,7 @@
   /* Example heading styles inside modal */
   .modal-content h2, .modal-content h3 {
     font-family: 'Cinzel', serif; /* or your chosen accent font */
-    color: #d4af37;               /* Gold accent color */
+    color: #FF8F00;               /* Gold accent color */
     margin-bottom: 0.5rem;
   }
   
@@ -227,9 +227,9 @@
   .modal-content button {
     display: inline-block;
     padding: 8px 16px;
-    border: 2px solid #d4af37;
+    border: 2px solid #FF8F00;
     background: transparent;
-    color: #d4af37;
+    color: #FF8F00;
     border-radius: 4px;
     text-decoration: none;
     transition: background 0.3s, color 0.3s;
@@ -237,7 +237,7 @@
   }
   .modal-content a.btn:hover,
   .modal-content button:hover {
-    background: #d4af37;
+    background: #FF8F00;
     color: #2c2c2c;
   }
   
@@ -248,7 +248,7 @@
     right: 1.5rem;
     font-size: 2rem;
     cursor: pointer;
-    color: #d4af37;
+    color: #FF8F00;
     transition: color 0.3s;
   }
   .modal-close:hover {
@@ -330,7 +330,7 @@
     font-size: 2.5em;
     margin-bottom: 40px;
     font-family: 'Cinzel', serif;
-    color: #d4af37;
+    color: #FF8F00;
   }
   
   /* Blog Cards Layout */
@@ -362,7 +362,7 @@
   }
   .blog-content h3 {
     font-family: 'Cinzel', serif;
-    color: #d4af37;
+    color: #FF8F00;
     margin-bottom: 10px;
   }
   .blog-content p {
@@ -373,15 +373,15 @@
   .btn {
     display: inline-block;
     padding: 8px 16px;
-    border: 2px solid #d4af37;
+    border: 2px solid #FF8F00;
     background: transparent;
-    color: #d4af37;
+    color: #FF8F00;
     border-radius: 4px;
     text-decoration: none;
     transition: background 0.3s, color 0.3s;
   }
   .btn:hover {
-    background: #d4af37;
+    background: #FF8F00;
     color: #1a1a1a;
   }
   .view-all {
@@ -403,7 +403,7 @@
     font-size: 2.5em;
     margin-bottom: 40px;
     font-family: 'Cinzel', serif;
-    color: #d4af37;
+    color: #FF8F00;
   }
   
   /* Project Cards Layout */
@@ -435,7 +435,7 @@
   }
   .project-info h3 {
     font-family: 'Cinzel', serif;
-    color: #d4af37;
+    color: #FF8F00;
     margin-bottom: 10px;
   }
   .project-info p {
@@ -446,15 +446,15 @@
   .btn {
     display: inline-block;
     padding: 8px 16px;
-    border: 2px solid #d4af37;
+    border: 2px solid #FF8F00;
     background: transparent;
-    color: #d4af37;
+    color: #FF8F00;
     border-radius: 4px;
     text-decoration: none;
     transition: background 0.3s, color 0.3s;
   }
   .btn:hover {
-    background: #d4af37;
+    background: #FF8F00;
     color: #1a1a1a;
   }
   
@@ -481,7 +481,7 @@
     font-size: 2.5em;
     margin-bottom: 20px;
     font-family: 'Cinzel', serif;
-    color: #d4af37;
+    color: #FF8F00;
   }
   #contact p {
     font-size: 1.1em;
@@ -509,15 +509,15 @@
   }
   #contact form button {
     padding: 10px 20px;
-    border: 2px solid #d4af37;
+    border: 2px solid #FF8F00;
     background: transparent;
-    color: #d4af37;
+    color: #FF8F00;
     border-radius: 4px;
     cursor: pointer;
     transition: background 0.3s, color 0.3s;
   }
   #contact form button:hover {
-    background: #d4af37;
+    background: #FF8F00;
     color: #1a1a1a;
   }
   
@@ -528,7 +528,7 @@
   .social-links a {
     margin: 0 10px;
     font-size: 1.5em;
-    color: #d4af37;
+    color: #FF8F00;
     transition: color 0.3s;
   }
   .social-links a:hover {
@@ -711,7 +711,7 @@ body::before {
   .right-side section h3 {
     margin-bottom: 1rem;
     font-family: 'Cinzel', serif;
-    color: #d4af37; /* Golden accent, matching previous theme */
+    color: #FF8F00; /* Golden accent, matching previous theme */
   }
   
   #hero {
@@ -756,7 +756,7 @@ body::before {
   #skills h2 {
     font-size: 2.5em;
     font-family: 'Cinzel', serif;
-    color: #d4af37;
+    color: #FF8F00;
     margin-bottom: 1.5rem;
   }
   
@@ -767,7 +767,7 @@ body::before {
   .skills-group h3 {
     font-size: 1.8em;
     font-family: 'Cinzel', serif;
-    color: #d4af37;
+    color: #FF8F00;
     margin-bottom: 1rem;
   }
   
@@ -799,7 +799,7 @@ body::before {
   /* Skill Icon */
   .skill-item i {
     font-size: 2em;
-    color: #d4af37;
+    color: #FF8F00;
     margin-bottom: 0.5rem;
   }
   
